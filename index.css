@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+    font-family: 'Poppins', sans-serif; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: url(./workshop3.jpg) center/cover;   /*ekrana sığdır tamamını kapsa*/
+    width: 100vw;
+    height: 100vh;
+}
+ul.menu{
+    height: 60px;
+    background: rgba(0, 0, 0, 0.5)
+}
+ul.menu >li{
+    float: left;
+list-style: none;
+position: relative;
+}
+ul.menu >li >a{
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    line-height: 60px;
+    padding: 0 20px;
+    font-size: 15px;
+    font-weight:500 ;
+}
+ul.menu ul {    /* yeni otomobillerin bağlı olduğu ul*/
+    width: 100px;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0;
+    top: 60px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+}
+ul.menu ul li{ /*ayın özel teklifleri */
+    position: relative;
+}
+ul.menu ul li{
+    list-style: none;    
+}
+ul.menu ul li a {
+  display: block;
+  text-decoration: none;
+  padding: 7px 12px;
+  color: #fff;
+  font-size: 14px;
+}
+
+ul.menu >li ul ul{
+    top: 0;
+    left: 180px; 
+}
+ul.menu >li:hover > ul{
+    opacity: 1;
+    visibility: visible;
+    top: 60px;
+}
+ul.menu ul li:hover >ul{
+    opacity: 1;
+    visibility: visible;
+    left: 100px;
+}
